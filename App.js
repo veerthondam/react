@@ -8,7 +8,7 @@
 
      /* jQuery */
 
-     let ele = $("<h1>").text("welcome to javascript");
+     let ele = $("<h2>").text("welcome to javascript");
      //$("#root").html(ele);
 /*
      const heading = React.createElement('h1',{id:'parent', className:'hello'}, "Welcome to Reactjs");
