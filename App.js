@@ -1,41 +1,25 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-    /* Javascript */
-    //    let root = document.getElementById("root"); 
-    //    root.innerHTML = "";
-    //   let cretEle = document.createElement("h1");
-    //   cretEle.innerHTML = "Welcome to Reactjs";
-     // root.append(cretEle)
-
-     /* jQuery */
-
-     let ele = $("<h2>").text("welcome to javascript");
-     //$("#root").html(ele);
 /*
      const heading = React.createElement('h1',{id:'parent', className:'hello'}, "Welcome to Reactjs");
      const root = ReactDOM.createRoot(document.getElementById('root'));
      root.render(heading);
 
+*/
+
+let heading = (
+  <h1 id="heading" className="headingData">
+    Hello this first JSX 🧑‍🚀
+  </h1>
+);
+
+/*
+     ^ the above written HTML - JSX
+     & babel - transpiles React.createElement --> ReactElement --> HTMLElement(render)
+
+     * () - if we want to write jsx in multiple lines, use dobule round bracket
      */
-     const heading = React.createElement('h1',
-                              {id:'parent', className:'hello'},[
-                                React.createElement('div',
-                                        {id:'child', className:'child'}, "Welcome to child 1", 
-                                        
-                                ),
-                                React.createElement('div',
-                                {id:'child1', className:'child1'}, "Welcome to child 2", 
-                                
-                        )
 
-                                
-                              ]
-                              
-                              
-                              
-                              );
-                              
-     const root = ReactDOM.createRoot(document.getElementById('root'));
-     root.render(heading);
-
-
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(heading);
