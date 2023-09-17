@@ -2,24 +2,23 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 /*
-     const heading = React.createElement('h1',{id:'parent', className:'hello'}, "Welcome to Reactjs");
-     const root = ReactDOM.createRoot(document.getElementById('root'));
-     root.render(heading);
-
+  ^ Component is a javascript function which return's React Element
+  & Component composition - component inside component
 */
+let ele = "Hello";
 
-let heading = (
-  <h1 id="heading" className="headingData">
-    Hello this first JSX 🧑‍🚀
-  </h1>
+let HeadingComponent = () => (
+  <div id="container">
+      <Title /> {2+2}
+    <h1 id="heading" className="headingData">
+    Hello this first JSX 🧑‍🚀 {ele}
+    </h1>
+  </div>
 );
 
-/*
-     ^ the above written HTML - JSX
-     & babel - transpiles React.createElement --> ReactElement --> HTMLElement(render)
-
-     * () - if we want to write jsx in multiple lines, use dobule round bracket
-     */
+const Title = () => (
+     <h1> This is title tag 👨</h1>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(<HeadingComponent />);
